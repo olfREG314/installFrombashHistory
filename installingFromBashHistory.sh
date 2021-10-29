@@ -16,8 +16,8 @@ do
 	if [[ "$CURRENT_LINE" =~ "sudo apt install" ]]
 	    then 
 	    echo -e "$LINE: $CURRENT_LINE __do you want to install it (y/n):"
-		#taking inout from the current terminal
-	        read ANS < tty
+		#taking inout from the current terminal or swap with your current terminal using command 'tty'...
+	        read ANS < dev/pts/0
 	        case "$ANS" in 
 	        [y])
 	            $CURRENT_LINE
